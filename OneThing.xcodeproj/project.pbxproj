@@ -22,6 +22,7 @@
 		C481C1A21706282F00AF9EBB /* OneThing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C481C1A01706282F00AF9EBB /* OneThing.xcdatamodeld */; };
 		C481C1A51706282F00AF9EBB /* DSEMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C481C1A41706282F00AF9EBB /* DSEMasterViewController.m */; };
 		C481C1A81706282F00AF9EBB /* DSEDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C481C1A71706282F00AF9EBB /* DSEDetailViewController.m */; };
+		C481C1B0170628D500AF9EBB /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C481C1AF170628D500AF9EBB /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		C481C1A41706282F00AF9EBB /* DSEMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSEMasterViewController.m; sourceTree = "<group>"; };
 		C481C1A61706282F00AF9EBB /* DSEDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSEDetailViewController.h; sourceTree = "<group>"; };
 		C481C1A71706282F00AF9EBB /* DSEDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSEDetailViewController.m; sourceTree = "<group>"; };
+		C481C1AE170628D500AF9EBB /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		C481C1AF170628D500AF9EBB /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				C481C1A61706282F00AF9EBB /* DSEDetailViewController.h */,
 				C481C1A71706282F00AF9EBB /* DSEDetailViewController.m */,
 				C481C1A01706282F00AF9EBB /* OneThing.xcdatamodeld */,
+				C481C1AE170628D500AF9EBB /* Event.h */,
+				C481C1AF170628D500AF9EBB /* Event.m */,
 				C481C1891706282F00AF9EBB /* Supporting Files */,
 			);
 			path = OneThing;
@@ -195,6 +200,7 @@
 				C481C1A21706282F00AF9EBB /* OneThing.xcdatamodeld in Sources */,
 				C481C1A51706282F00AF9EBB /* DSEMasterViewController.m in Sources */,
 				C481C1A81706282F00AF9EBB /* DSEDetailViewController.m in Sources */,
+				C481C1B0170628D500AF9EBB /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
