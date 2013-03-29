@@ -7,8 +7,8 @@
 //
 
 #import "DSEMasterViewController.h"
-
 #import "DSEDetailViewController.h"
+#import "Event.h"
 
 @interface DSEMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -113,8 +113,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        self.detailViewController.detailItem = object;
+        Event *event = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        self.detailViewController.event = event;
     }
 }
 
@@ -122,8 +122,9 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setDetailItem:object];
+        Event *event = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        DSEDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.event = event;
     }
 }
 
@@ -228,8 +229,8 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    Event *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = event.title;
 }
 
 @end
