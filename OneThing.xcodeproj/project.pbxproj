@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4484E9F1707ECC600ACF36F /* DSEInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4484E9E1707ECC600ACF36F /* DSEInputViewController.m */; };
 		C481C1811706282F00AF9EBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C481C1801706282F00AF9EBB /* UIKit.framework */; };
 		C481C1831706282F00AF9EBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C481C1821706282F00AF9EBB /* Foundation.framework */; };
 		C481C1851706282F00AF9EBB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C481C1841706282F00AF9EBB /* CoreGraphics.framework */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4484E9D1707ECC600ACF36F /* DSEInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEInputViewController.h; sourceTree = "<group>"; };
+		C4484E9E1707ECC600ACF36F /* DSEInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEInputViewController.m; sourceTree = "<group>"; };
 		C481C17D1706282F00AF9EBB /* OneThing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneThing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C481C1801706282F00AF9EBB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C481C1821706282F00AF9EBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +112,8 @@
 				C481C1AE170628D500AF9EBB /* Event.h */,
 				C481C1AF170628D500AF9EBB /* Event.m */,
 				C481C1891706282F00AF9EBB /* Supporting Files */,
+				C4484E9D1707ECC600ACF36F /* DSEInputViewController.h */,
+				C4484E9E1707ECC600ACF36F /* DSEInputViewController.m */,
 			);
 			path = OneThing;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				C481C1A51706282F00AF9EBB /* DSEMasterViewController.m in Sources */,
 				C481C1A81706282F00AF9EBB /* DSEDetailViewController.m in Sources */,
 				C481C1B0170628D500AF9EBB /* Event.m in Sources */,
+				C4484E9F1707ECC600ACF36F /* DSEInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +339,7 @@
 				C481C1AD1706282F00AF9EBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
