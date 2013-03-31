@@ -9,6 +9,7 @@
 #import "DSEMasterViewController.h"
 #import "DSEDetailViewController.h"
 #import "DSEInputViewController.h"
+#import "DSEEventCell.h"
 #import "Event.h"
 
 @interface DSEMasterViewController ()
@@ -74,7 +75,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    DSEEventCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -224,10 +225,12 @@
 }
  */
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(DSEEventCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Event *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = event.title;
+    cell.titleLabel.text = event.title;
+    cell.descriptionLabel.text = event.eventDescription;
+    cell.dateLabel.text = [event.timeStamp description];
 }
 
 @end
