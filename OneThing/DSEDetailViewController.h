@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class Event;
 
-@interface DSEDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface DSEDetailViewController : UITableViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) Event *event;
 

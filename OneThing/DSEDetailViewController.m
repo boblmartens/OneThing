@@ -11,8 +11,9 @@
 
 @interface DSEDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
-@property (weak, nonatomic) UILabel *detailDescriptionLabel;
-- (void)configureView;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @end
 
 @implementation DSEDetailViewController
@@ -36,7 +37,10 @@
 - (void)configureView
 {
     if (self.event) {
-        self.detailDescriptionLabel.text = self.event.title;
+        self.navigationItem.title = self.event.title;
+        self.descriptionLabel.text = self.event.eventDescription;
+        self.dateLabel.text = [[self fullDateFormatter] stringFromDate:self.event.timeStamp];
+        self.timeLabel.text = [[self mediumTimeFormatter] stringFromDate:self.event.timeStamp];
     }
 }
 
@@ -51,6 +55,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSDateFormatter *)fullDateFormatter {
+    NSDateFormatter *fullDateFormatter = [[NSDateFormatter alloc] init];
+    fullDateFormatter.dateStyle = NSDateFormatterFullStyle;
+    fullDateFormatter.timeStyle = NSDateFormatterNoStyle;
+    return fullDateFormatter;
+}
+
+- (NSDateFormatter *)mediumTimeFormatter {
+    NSDateFormatter *mediumTimeFormatter = [[NSDateFormatter alloc] init];
+    mediumTimeFormatter.dateStyle = NSDateFormatterNoStyle;
+    mediumTimeFormatter.timeStyle = NSDateFormatterMediumStyle;
+    return mediumTimeFormatter;
 }
 
 #pragma mark - Split view
